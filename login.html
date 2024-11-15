@@ -12,13 +12,15 @@
 
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-         
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+
       
       <!-- Styling -->
     <style>
           body {
               background-color: #1a1a1a;
               color: white;
+             
           }
   
           .hero-section {
@@ -90,6 +92,57 @@
               margin: 0 10px;
               color: white;
           }
+
+          .loginName{
+            font-size:40px;
+            position: relative;
+            padding-left: 45%;
+padding-bottom: 20%;
+            font-family:roboto;
+            color: #ff4d4d;
+
+          }
+
+       
+          .main-container {
+            min-height: 100vh;
+
+        }
+        
+        .login-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-header img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .form-floating {
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .alert {
+            display: none;
+            margin-top: 1rem;
+            color: #1a1a1a;
+        }
+
+        .form-check{
+            color:black;
+        }
       </style>
   </head>
   <body>
@@ -128,103 +181,86 @@
       <!-- Navbar -->
 
 
-  
-
-      <!-- Hero Section -->
-      <div class="hero-section">
-          <img src="https://mediatoon-licensing.com/wp-content/uploads/2024/05/NEWS-DAN-DA-DAN-1.png">
-          <div class="hero-content">
-              <h1>DanDaDan</h1>
-              <p>DanDaDan is a supernatural and comedic manga that centers on two teenagers: Takakura, an occult enthusiast who doesn't believe in ghosts, and Ayase, a girl who is skeptical about aliens...</p>
-              <div class="rating-stars mb-3">
-                  ★★★★☆
-              </div>
-              <button class="watch-now-btn">WATCH NOW</button>
-          </div>
-      </div>
-  
-      <!-- Top 10 Section -->
-      <div class="container mt-5">
-          <h2 class="section-title">Top 10 this week</h2>
-          <div class="row">
-              <div class="col-12">
-                  <div id="top10Carousel" class="carousel slide" data-bs-ride="carousel">
-                     
-                    <div class="carousel-inner">
-                          <div class="carousel-item active">
-                              <div class="row">
-                                  <div class="col-3">
-                                      <div class="anime-card">
-                                          <img src="https://m.media-amazon.com/images/M/MV5BODlhNTQ3ZDgtMDJlMC00YzdmLWE3ZTMtOWNmMTZkN2I2MzI5XkEyXkFqcGc@._V1_.jpg" class="w-100" alt="Anime 1">
-                                      </div>
-                                  </div>
-                                            <div class="col-3">
-                                                <div class="anime-card">
-                                                    <img src="https://m.media-amazon.com/images/M/MV5BYTgyMzA5MjEtNDY3Ny00ZDkyLWJhYzEtYzI2Nzk5Mzc3ZDk1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="w-100" alt="Anime 1">
-                                                </div>
-                                            </div>
-                                            <div class="col-3">
-                                                <div class="anime-card">
-                                                    <img src="https://m.media-amazon.com/images/M/MV5BYTgyMzA5MjEtNDY3Ny00ZDkyLWJhYzEtYzI2Nzk5Mzc3ZDk1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="w-100" alt="Anime 1">
-                                                </div>
-                                            </div>
-                                            <div class="col-3">
-                                                <div class="anime-card">
-                                                    <img src="https://m.media-amazon.com/images/M/MV5BYTgyMzA5MjEtNDY3Ny00ZDkyLWJhYzEtYzI2Nzk5Mzc3ZDk1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="w-100" alt="Anime 1">
-                                                </div>
-                                            </div>
-                                  <!-- Repeat for other cards -->
-                              </div>
-                          </div>
-                      </div>
-                      <button class="carousel-control-prev" type="button" data-bs-target="#top10Carousel" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon"></span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#top10Carousel" data-bs-slide="next">
-                          <span class="carousel-control-next-icon"></span>
-                      </button>
-                  </div>
-              </div>
-          </div>
-      </div>     
-       <!-- Top 10 Section -->
-  
 
 
 
-      <!-- Latest Release Section -->
-      <div class="container mt-5">
-          <h2 class="section-title">Latest Release This Year</h2>
-          <div class="row">
-              <div class="col-3">
-                  <div class="anime-card">
-                      <img src="https://m.media-amazon.com/images/M/MV5BNmI1MmYxNWQtY2E5NC00ZTlmLWIzZGEtNzM1YmE3NDA5NzhjXkEyXkFqcGc@._V1_.jpg" class="w-100" alt="Latest 1">
-                  </div>
-              </div>
+  <!--login box-->
+  <div class="main-container d-flex align-items-center justify-content-center">
+    <div class="login-container">
+        <div class="login-header">
+            <img src="/api/placeholder/80/80" alt="Logo" class="rounded-circle">
+            <h2 class="text-primary">Welcome Back</h2>
+            <p class="text-muted">Please enter your credentials</p>
+        </div>
 
-              <div class="col-3">
-                <div class="anime-card">
-                    <img src="https://m.media-amazon.com/images/M/MV5BZTM2MmRjOTYtMTgwNS00NDUyLTk0Y2YtNTZkMjZkOTE0OTdlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="w-100" alt="Latest 1">
-                </div>
+        <form id="loginForm" onsubmit="return handleLogin(event)">
+            <div class="form-floating">
+                <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
+                <label for="emailInput">Email address</label>
             </div>
 
-            <div class="col-3">
-                <div class="anime-card">
-                    <img src="https://m.media-amazon.com/images/M/MV5BMThhODExMTUtZmIyMC00OTY4LTk5YWMtN2YxYWRhNmNiNDNmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="w-100" alt="Latest 1">
-                </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="passwordInput" placeholder="Password" required>
+                <label for="passwordInput">Password</label>
             </div>
 
-            <div class="col-3">
-                <div class="anime-card">
-                    <img src="https://m.media-amazon.com/images/M/MV5BMjAzNzUwMTk4OV5BMl5BanBnXkFtZTgwOTE2MjAwNTE@._V1_FMjpg_UX1000_.jpg" class="w-100" alt="Latest 1">
-                </div>
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">Remember me</label>
             </div>
-              <!-- Repeat for other cards -->
-          </div>
-      </div>
-        <!-- Latest Release Section -->
+
+            <button type="submit" class="btn btn-primary w-100 py-2">Sign In</button>
+
+            <div class="text-center mt-3">
+                <a href="#" class="text-decoration-none">Forgot password?</a>
+            </div>
+        </form>
+
+        <div class="alert alert-danger" role="alert" id="errorAlert">
+            Invalid email or password. Please try again.
+        </div>
+
+        <div class="alert alert-success" role="alert" id="successAlert">
+            Login successful! Redirecting...
+        </div>
+    </div>
+</div>
 
 
+
+
+
+
+
+
+<div> 
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
 
       <!-- Footer -->
       <footer class="text-center">
@@ -251,15 +287,75 @@
         <!-- Footer -->
 
 
+
+
+
+
+
+
+        <!-- Bootstrap JS and dependencies -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+<script>
+    function handleLogin(event) {
+        event.preventDefault();
+        
+        const email = document.getElementById('emailInput').value;
+        const password = document.getElementById('passwordInput').value;
+        const errorAlert = document.getElementById('errorAlert');
+        const successAlert = document.getElementById('successAlert');
+
+        // Hide any existing alerts
+        errorAlert.style.display = 'none';
+        successAlert.style.display = 'none';
+
+        // Simple validation (for demo purposes)
+        if (email === 'demo@example.com' && password === 'password123') {
+            successAlert.style.display = 'block';
+            // Simulate redirect after successful login
+            setTimeout(() => {
+                alert('Redirect to dashboard (demo purpose only)');
+            }, 2000);
+        } else {
+            errorAlert.style.display = 'block';
+        }
+
+        return false;
+    }
+
+    // Optional: Add password visibility toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const passwordInput = document.getElementById('passwordInput');
+        
+        // Store email in localStorage if "Remember me" is checked
+        const rememberMe = document.getElementById('rememberMe');
+        const storedEmail = localStorage.getItem('rememberedEmail');
+        
+        if (storedEmail) {
+            document.getElementById('emailInput').value = storedEmail;
+            rememberMe.checked = true;
+        }
+
+        rememberMe.addEventListener('change', function() {
+            const email = document.getElementById('emailInput').value;
+            if (this.checked) {
+                localStorage.setItem('rememberedEmail', email);
+            } else {
+                localStorage.removeItem('rememberedEmail');
+            }
+        });
+    });
+</script>
+
+
+
+
+</script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
       <script>
-          // Add carousel functionality
-          document.addEventListener('DOMContentLoaded', function() {
-              var myCarousel = new bootstrap.Carousel(document.getElementById('top10Carousel'), {
-                  interval: 5000,
-                  wrap: true
-              });
-          });
+      
   
           // Add hover effects
           document.querySelectorAll('.anime-card').forEach(card => {
@@ -277,4 +373,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
+
 
