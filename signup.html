@@ -437,7 +437,7 @@ window.handleSignup = async function(event) {
         await createUserWithEmailAndPassword(auth, email, password);
         successAlert.style.display = 'block';
         setTimeout(() => {
-            window.location.href = 'homepageLog.html';
+            window.location.href = '/login_version/homepageLog.html';
         }, 1500);
     } catch (error) {
         errorAlert.textContent = error.message;
