@@ -388,6 +388,64 @@ setTimeout(() => {
   </html>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
+<script type="module">
+const firebaseConfig = {
+  apiKey: "AIzaSyB3JBtxj3B8Rp73NFNuX8FpJ8LePaeBHoY",
+  authDomain: "anistar-50b4c.firebaseapp.com", 
+  projectId: "anistar-50b4c",
+  storageBucket: "anistar-50b4c.firebasestorage.app",
+  messagingSenderId: "201952772284",
+  appId: "1:201952772284:web:986a4334f9a9f601a850b9",
+  measurementId: "G-NVFGNZ8S3K"
+};
+
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js';
+import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js';
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+window.handleSignup = async function(event) {
+    event.preventDefault();
+    
+    const email = document.getElementById('emailInput').value;
+    const password = document.getElementById('passwordInput').value;
+    const confirmPassword = document.getElementById('confirmPasswordInput').value;
+    const errorAlert = document.getElementById('errorAlert');
+    const successAlert = document.getElementById('successAlert');
+    
+    errorAlert.style.display = 'none';
+    successAlert.style.display = 'none';
+
+    if (password !== confirmPassword) {
+        errorAlert.textContent = 'Passwords do not match!';
+        errorAlert.style.display = 'block';
+        return false;
+    }
+
+    const strongRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+    if (!strongRegex.test(password)) {
+        errorAlert.textContent = 'Password must be at least 8 characters long and include uppercase, lowercase, numbers, and special characters.';
+        errorAlert.style.display = 'block';
+        return false;
+    }
+
+    try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        successAlert.style.display = 'block';
+        setTimeout(() => {
+            window.location.href = 'homepageLog.html';
+        }, 1500);
+    } catch (error) {
+        errorAlert.textContent = error.message;
+        errorAlert.style.display = 'block';
+    }
+    return false;
+}
+</script>
   </body>
 </html>
 
